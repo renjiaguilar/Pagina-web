@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deportes</title>
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="encabezado">
+
+<header>
+    <h1><i class="bi bi-trophy-fill"></i> Deportes</h1>
+</header>
+
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="futbol.html">Equipos Favoritos</a>
+        <a href="pasatiempos.html">Pasatiempos</a>
+        <a href="deportes.html">Deportes</a>
+        <a href="turismo.html">Turismo</a>
+    </div>
+
+</div>
+
+<section>
+
+<img src="imagenes/futley.jpg">
+
+<h2>
+    <span class="material-symbols-outlined">sports</span>
+    Deportes
+</h2>
+
+<ol>
+    <li>
+        <span class="material-symbols-outlined">sports_soccer</span>
+         <b>Fútbol:</b>
+
+        <p>
+        El fútbol es el deporte que más practico. Todos los sábados juego con mis amigos y también con ex profesores de mi colegio. Es un momento donde puedo divertirme, competir y mantenerme activo físicamente.
+        </p>
+
+        <p>
+        Me gusta porque es un deporte de equipo donde la comunicación es muy importante. Cada partido es diferente y siempre se aprende algo nuevo jugando.
+        </p>
+    </li>
+
+    <li>
+        <span class="material-symbols-outlined">sports_volleyball</span>
+        <b>Vóley:</b>
+
+        <p>
+        El vóley lo practicaba con frecuencia cuando estaba en el colegio. Jugaba con mis compañeros durante las clases de educación física y en partidos amistosos.
+        </p>
+
+        <p>
+        Actualmente ya no lo juego tan seguido, pero lo recuerdo como un deporte muy divertido que ayudaba a mejorar la coordinación y el trabajo en equipo.
+        </p>
+    </li>
+</ol>
+
+</section>
+
+    <section>
+        <h2>
+            <span class="material-symbols-outlined">sports_soccer</span>
+            Cotizador de Alquiler de Canchas donde juego
+        </h2>
+        <p>Selecciona el tipo de cancha, las horas que deseas jugar y el horario para calcular el costo total de alquiler con descuentos especiales.</p>
+
+        <div class="tabla-contenedor">
+        <table>
+            <tr>
+                <th>Tipo de Deporte / Cancha:</th>
+                <td>
+                    <select id="cboCancha">
+                        <option value="60">Fútbol 7 - Césped Sintético (S/ 60.00 / hora)</option>
+                        <option value="40">Vóley - Losa Deportiva (S/ 40.00 / hora)</option>
+                        <option value="45">Básquetbol - Tablero Oficial (S/ 45.00 / hora)</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Cantidad de Horas:</th>
+                <td>
+                    <input type="number" id="txtHoras" value="1" min="1">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Horario / Turno:</th>
+                <td>
+                    <input type="radio" id="rbDia" name="rbTurno" value="0" checked>
+                    <label for="rbDia">Turno Día - Luz Natural (+S/ 0)</label><br>
+                    <input type="radio" id="rbNoche" name="rbTurno" value="20">
+                    <label for="rbNoche">Turno Noche - Iluminación LED (+S/ 20.00 / hora)</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Calcular Alquiler" onclick="calcularAlquiler()" style="padding: 8px 18px; cursor: pointer;">
+                    <input type="button" value="Limpiar" onclick="limpiarCancha()" style="padding: 8px 18px; cursor: pointer; margin-left: 10px;">
+                </td>
+            </tr>
+
+            <tr>
+                <th>Subtotal:</th>
+                <td>
+                <input type="text" id="txtSubtotal" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Descuento Promoción:</th>
+                <td>
+                <input type="text" id="txtDescuento" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Total a Pagar (S/):</th>
+                <td>
+                <input type="text" id="txtTotal" readonly style="font-weight: bold;">
+                </td>
+            </tr>
+        </table>
+        </div>
+    </section>
+
+<footer>
+    Hecho por Renji Aguilar | <a href="https://www.instagram.com/renji2803/" target="_blank">
+        <i class="bi bi-instagram"></i>
+    </a> Instagram
+</footer>
+
+<script src="Alquiler.js"></script>
+</body>
+</html>
